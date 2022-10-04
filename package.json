@@ -2,11 +2,6 @@
   "name": "next-ts-eslint-prettier",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=14.0.0",
-    "yarn": ">=7.11.0",
-    "npm": "please-use-pnpm"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
