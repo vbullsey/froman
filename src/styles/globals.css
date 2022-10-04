@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('./meteor.css');
+@import url('./magic-card.css');
+@import url('./desk.css');
+@import url('./neon-text.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Virgil';
+  src: url('/font/Virgil_GS_Regular.ttf');
+}
+
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Virgil, Roboto', sans-serif;
+    display: block;
+    min-height: 100%;
+    @apply text-base text-ui-white md:text-lg;
+    @apply bg-ui-dark;
+  }
+
+  html {
+    scrollbar-width: thin;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-ui-blue-hover;
+    width: 300px;
+    height: 100px;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ui-blue border-ui-white rounded-sm;
+    width: 300px;
+    height: 100px;
+  }
+
+  main {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  h1 {
+    @apply font-virgil;
+  }
+
+  span,
+  input,
+  textarea,
+  button,
+  h2,
+  p {
+    @apply font-fr-mono;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .padding-layout {
+    @apply px-12 md:px-12 lg:px-24 xl:px-64;
+  }
+
+  .title {
+    @apply text-5xl;
+  }
+
+  .subTitle {
+    @apply text-4xl;
+  }
+
+  .text-form {
+    @apply px-4 py-3 w-full rounded-md bg-transparent border-2 border-ui-white  focus:ring-0 text-sm outline-none  focus:border-ui-blue;
+    /* @apply rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-red-500 focus:border-red-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500; */
+  }
+
+  .text-form-error {
+    @apply px-4 py-3 w-full rounded-md bg-transparent border-2 border-red-500  focus:ring-0 text-sm outline-none  focus:border-red-500;
+    /* @apply rounded-none rounded-r-lg bg-gray-50 border text-gray-900 focus:ring-red-500 focus:border-red-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500; */
+  }
+
+  .text-area {
+    @apply px-4 py-2.5 w-full rounded-md bg-transparent border-2 border-ui-white  focus:ring-0 text-sm outline-none  focus:border-ui-blue;
+  }
+
+  .text-area-error {
+    @apply px-4 py-2.5 w-full rounded-md bg-transparent border-2 border-red-500  focus:ring-0 text-sm outline-none  focus:border-red-500;
+  }
+
+  .card-content {
+    @apply relative bg-ui-gray-hover rounded-md min-h-[260px] z-10 before:absolute before:content-[''] hover:scale-105 transition duration-200 ease-out    before:bg-ui-gray-before before:inset-0 before:-rotate-3 before:rounded-md before:z-0;
+  }
+}
