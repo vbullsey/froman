@@ -5,7 +5,7 @@ class MyDocument extends Document {
   // eslint-disable-next-line class-methods-use-this
   render() {
     return (
-      <Html lang="en" title="hola">
+      <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -13,7 +13,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
             rel="stylesheet"
           />
-          <title>Felipe Román Dev</title>
         </Head>
         <body>
           <Main />
